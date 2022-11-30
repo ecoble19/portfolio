@@ -5,8 +5,6 @@ type Props = {
     selected?: NavSelection
 }
 
-const NavItem: FC<
-
 const NavBar: FC<Props> = ({selected}) => (
     <nav>
         <ul>
