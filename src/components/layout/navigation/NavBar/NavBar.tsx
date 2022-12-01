@@ -1,14 +1,19 @@
-import React, {FC} from 'react';
+import React, {FC, ReactElement, ReactNode} from 'react';
+import {useStyles} from "./NavBar.styles";
 
-type NavSelection = 'home';
 type Props = {
-    selected?: NavSelection
+    children: ReactNode
 }
 
-const NavBar: FC<Props> = ({selected}) => (
-    <nav>
-        <ul>
-            <li><a title={"Home"}>Home</a></li>
-        </ul>
-    </nav>
-)
+const NavBar: FC<Props> = ({children}) => {
+    const classes = useStyles();
+    return (
+        <nav className={classes.root}>
+            <ul className={classes.list}>
+                {children}
+            </ul>
+        </nav>
+    )
+}
+
+export default NavBar;

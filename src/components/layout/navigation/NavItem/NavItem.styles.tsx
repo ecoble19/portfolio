@@ -7,9 +7,17 @@ export const useStyles = createUseStyles((theme: Theme) => ({
         listStyle: 'none',
         display: 'inline-block',
         textAlign: 'center',
-        borderBottom: `4px solid transparent`,
-        '&.active': {
-            borderBottom: `4px solid ${theme.palette.primary.main}`
-        }
+        margin: '0 8px',
+        padding: 0,
+        fontSize: 16,
     },
+    anchor: {
+        height: 28,
+        display: 'inline-block',
+        borderBottom: `3px solid transparent`,
+        padding: '0 8px',
+        '&.active': {
+            borderBottom: `3px solid ${theme.palette.secondary.main}`
+        }
+    }
 }));

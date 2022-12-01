@@ -1,6 +1,7 @@
 import {ThemeProvider} from "react-jss";
 import defaultTheme from "../src/utils/constants/theme";
 import {addDecorator} from "@storybook/react";
+import '../src/App.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,7 +16,7 @@ export const parameters = {
 addDecorator((story) => (
     <>
       <ThemeProvider theme={defaultTheme}>
-        {story()}
+              {story()}
       </ThemeProvider>
     </>
 ))

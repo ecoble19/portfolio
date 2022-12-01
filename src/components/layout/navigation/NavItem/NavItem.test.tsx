@@ -14,15 +14,15 @@ describe('Nav Item Component', () => {
     test('no border visible when inactive', () => {
         render(<NavItem title={'hello'} active={false} onClick={() => {
         }}/>);
-        const el = screen.getByText(/hello/i).parentElement;
-        expect(el).toHaveStyle('border-bottom: 4px solid transparent');
+        const el = screen.getByText(/hello/i);
+        expect(el).toHaveStyle('border-bottom: 3px solid transparent');
     });
 
     test('border visible when active', () => {
         render(<NavItem title={'hello'} active={true} onClick={() => {
         }}/>);
-        const el = screen.getByText(/hello/i).parentElement;
-        expect(el).toHaveStyle(`border-bottom: 4px solid ${defaultTheme.palette.primary.main}`);
+        const el = screen.getByText(/hello/i);
+        expect(el).toHaveStyle(`border-bottom: 3px solid ${defaultTheme.palette.secondary.main}`);
     });
 
     test('on click triggers', () => {

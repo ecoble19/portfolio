@@ -4,33 +4,28 @@ import './App.css';
 import HomePage from "./views/Home/HomePage/HomePage";
 import defaultTheme from "./utils/constants/theme";
 import {createTheming, ThemeProvider} from "react-jss";
+import NavBar from "components/layout/navigation/NavBar/NavBar";
+import NavItem from "components/layout/navigation/NavItem/NavItem";
 
 
 const ThemeContext = React.createContext({})
 
 // Creating a namespaced theming object.
 const theming = createTheming(ThemeContext)
+type Page = "home";
 
 function App() {
+    const page: Page = "home";
+
+    function navigate(u: string) {
+        //set url here
+    }
     return (
         <ThemeProvider theme={defaultTheme}>
-            <div className="App">
-                <header className="App-header">
-                    <HomePage/>
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.tsx</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
-            </div>
+            <NavBar>
+                <NavItem title={"Home"} active={page === "home"} onClick={() => navigate("home")} />
+            </NavBar>
+            <HomePage />
         </ThemeProvider>
     );
 }
