@@ -10,9 +10,11 @@ export const useStyles = createUseStyles((theme: Theme) => ({
         margin: '0 8px',
         padding: 0,
         fontSize: 16,
+        height: 48
     },
     anchor: {
-        height: 28,
+        height: 45,
+        lineHeight: '48px',
         display: 'inline-block',
         borderBottom: `3px solid transparent`,
         padding: '0 8px',

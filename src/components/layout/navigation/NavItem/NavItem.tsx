@@ -11,7 +11,9 @@ type Props = {
 const NavItem: FC<Props> = ({title, active, onClick}) => {
     const classes = useStyles();
     return (
-        <li className={classes.root}><a className={clsx(classes.anchor, active ? 'active' : null)} title={title} onClick={onClick}>{title}</a></li>
+        <li className={classes.root}>
+            <a className={clsx(classes.anchor, active ? 'active' : null)} title={title} onClick={onClick}>{title}</a>
+        </li>
     )
 }
 

@@ -19,13 +19,17 @@ function App() {
 
     function navigate(u: string) {
         //set url here
+        console.log('clicked');
     }
+
     return (
         <ThemeProvider theme={defaultTheme}>
-            <NavBar>
-                <NavItem title={"Home"} active={page === "home"} onClick={() => navigate("home")} />
-            </NavBar>
-            <HomePage />
+            <div style={{background: '#333', height: '100%', minHeight: '100vh', color: '#ccc'}}>
+                <NavBar>
+                    <NavItem title={"Home"} active={page === "home"} onClick={() => navigate("home")} />
+                </NavBar>
+                <HomePage/>
+            </div>
         </ThemeProvider>
     );
 }
