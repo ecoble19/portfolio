@@ -24,7 +24,7 @@ function App() {
 
     return (
         <ThemeProvider theme={defaultTheme}>
-            <div style={{background: '#333', height: '100%', minHeight: '100vh', color: '#ccc'}}>
+            <div style={{background: '#0a192f', height: '100%', minHeight: '100vh', color: '#8892b0'}}>
                 <NavBar>
                     <NavItem title={"Home"} active={page === "home"} onClick={() => navigate("home")} />
                 </NavBar>

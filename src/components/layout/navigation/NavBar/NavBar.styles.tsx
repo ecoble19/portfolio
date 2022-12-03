@@ -5,11 +5,10 @@ import {Theme} from "../../../../utils/constants/theme";
 export const useStyles = createUseStyles((theme: Theme) => ({
     root: {
         width: '100%',
-        backgroundColor: theme.palette.primary.main,
+        //backgroundColor: theme.palette.primary.main,
         display: 'flex',
         alignItems: 'flex-end',
         height: 48,
-        color: 'white',
         textAlign: 'center',
     },
     list: {

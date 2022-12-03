@@ -19,7 +19,12 @@ export const useStyles = createUseStyles((theme: Theme) => ({
         borderBottom: `3px solid transparent`,
         padding: '0 8px',
         '&.active': {
-            borderBottom: `3px solid ${theme.palette.secondary.main}`
+            borderBottom: `3px solid ${theme.palette.secondary.main}`,
+            color: '#ddd'
+        },
+        '&:hover': {
+            color: '#ddd',
+            cursor: 'pointer'
         }
     }
 }));
